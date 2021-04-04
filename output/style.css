@@ -1,0 +1,116 @@
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #222;
+}
+
+.root
+{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 640px;
+    margin-bottom: 10px;
+}
+
+.header
+{
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+
+    color: #eee;
+    text-decoration: none;
+}
+
+.menu
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    background: #222;
+}
+
+.menu > a
+{
+    display: block;
+    font-size: 1.25em;
+    color: #eee;
+    text-decoration: none;
+    transition: all 250ms linear;
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu > a:hover
+{
+    color: #222;
+    box-shadow: inset 0 -50px 0 0 #eee;
+}
+
+.menu.reverse > a:hover
+{
+    color: #222;
+    box-shadow: inset 0 50px 0 0 #eee;
+}
+
+.menu > a:not:last-child
+{
+    border-right: 1px solid #222;
+}
+
+.menu > a.current
+{
+    color: #222;
+    background: #eee;
+    font-weight: bold;
+}
+
+.article
+{
+    padding: 2em 1em;
+    color: #222;
+    background: #eee;
+}
+
+h1
+{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+
+    padding: 0 1.5em 0.5em 1.5em;
+}
+
+h2
+{
+    padding: 1em 0;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 1279px) /* mobile */
+{
+    h1
+    {
+        padding: 0 0 0.5em 0;
+    }
+}
+
+p
+{
+    padding: 0.5em 0;
+    font-size: 20px;
+}
